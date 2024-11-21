@@ -1,0 +1,34 @@
+﻿<Window x:Class="Coder.MainWindow"
+ xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+ xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+ xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+ xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+ xmlns:local="clr-namespace:Coder"
+ mc:Ignorable="d"
+ Title="Новое слово"
+ Height="200"
+ Width="300"
+ ResizeMode="NoResize"
+ WindowStyle="None"
+ WindowStartupLocation="CenterOwner"
+ Background="#FFD9FFF0">
+    <Grid Margin="10">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="30"/>
+            <RowDefinition Height="30"/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <TextBlock Text="Введите слово"/>
+        <TextBlock Text="Зашифрованное слово" VerticalAlignment="Top" Margin="0,17,0,0" Grid.Row="2"/>
+        <TextBox Name="WordNameTextBox" Grid.Row="1" HorizontalAlignment="Stretch"/>
+        <TextBox Name=" " Grid.Row="2" Margin="0,45,0,45"/>
+        <WrapPanel Grid.Row="2" HorizontalAlignment="Right" VerticalAlignment="Bottom" Margin="0,15,0,0">
+            <Button x:Name="decryptButton" Click="Decrypt_Button_Click"
+ MinWidth="60" Content="Расшифровать" Width="112"/>
+        </WrapPanel>
+        <Button x:Name="startButton" Click="Start_Button_Click"
+ MinWidth="60" Content="Старт" Margin="2,100,218,0" Grid.Row="2"/>
+        <Button x:Name="closeButton" IsDefault="True" Click="Close_Button_Click"
+     MinWidth="60" Content="Стоп" Margin="90,100,130,0" Grid.Row="2"/>
+    </Grid>
+</Window>

@@ -1,0 +1,36 @@
+﻿<Window x:Class="WpfAppExport.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfAppExport"
+        mc:Ignorable="d"
+            Title="DonorTitul" Height="570" Width="800">
+    <Grid Height="560" VerticalAlignment="Top">
+        <DataGrid x:Name="RegDonor" HorizontalAlignment="Left" Height="262" AutoGenerateColumns="False" Margin="36,69,0,0" VerticalAlignment="Top" Width="450" MouseLeftButtonUp="Registration_student_MouseLeftButtonUp">
+            <DataGrid.Columns>
+                <DataGridTextColumn Binding="{Binding donor_id}" Header="Id"/>
+                <DataGridTextColumn Binding="{Binding donor_fullname}" Header="ФИО"/>
+                <DataGridTextColumn Binding="{Binding donor_phone}" Header="Номер телефона"/>
+                <DataGridTextColumn Binding="{Binding donor_datereg}" Header="Дата регистрации"/>
+                <DataGridTextColumn Binding="{Binding donor_age}" Header="Возраст"/>
+            </DataGrid.Columns>
+        </DataGrid>
+        <Label Content="Регистрация донора" HorizontalAlignment="Center" Margin="0,27,0,0" VerticalAlignment="Top" FontSize="14" FontWeight="Bold"/>
+        <Label Content=" Введите ФИО" HorizontalAlignment="Left" Margin="517,72,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="fullname_input" HorizontalAlignment="Left" Height="23" Margin="526,103,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="245"/>
+        <Label Content=" Введите Номер телефона" HorizontalAlignment="Left" Margin="517,145,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="number_input" HorizontalAlignment="Left" Height="23" Margin="526,176,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="245"/>
+        <Label Content=" Введите Дату" HorizontalAlignment="Left" Margin="517,211,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="date_input" HorizontalAlignment="Left" Height="23" Margin="526,242,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="245"/>
+        <Label Content=" Введите Возраст" HorizontalAlignment="Left" Margin="526,281,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="age_input" HorizontalAlignment="Left" Height="23" Margin="526,312,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="245"/>
+        <Label Content="Действия с пользователем" HorizontalAlignment="Left" Margin="570,363,0,0" VerticalAlignment="Top"/>
+        <Button Content="Add" HorizontalAlignment="Left" Margin="610,403,0,0" VerticalAlignment="Top" Width="76" Click="Button_Click_add"/>
+        <Button Content="Delete" HorizontalAlignment="Left" Margin="610,441,0,0" VerticalAlignment="Top" Width="76" Click="Button_Click_del"/>
+        <Button Content="Update" HorizontalAlignment="Left" Margin="610,482,0,0" VerticalAlignment="Top" Width="76" Click="Button_Click_up"/>
+        <Button Content="Export" HorizontalAlignment="Left" Margin="36,369,0,0" VerticalAlignment="Top" Width="86" Click="Button_Click_export"/>
+        <Button Content="Import" HorizontalAlignment="Left" Margin="154,369,0,0" VerticalAlignment="Top" Width="86" Click="Button_Click_import"/>
+    </Grid>
+</Window>
+

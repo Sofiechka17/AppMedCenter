@@ -1,0 +1,24 @@
+﻿<Window x:Class="WpfAppExport.WindowImport"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfAppExport"
+        mc:Ignorable="d"
+            Title="DonorTitul" Height="570" Width="800">
+    <Grid Height="560" VerticalAlignment="Top">
+        <DataGrid x:Name="RegDonor" HorizontalAlignment="Left" Height="262" AutoGenerateColumns="False" Margin="36,69,0,0" VerticalAlignment="Top" Width="450">
+            <DataGrid.Columns>
+                <DataGridTextColumn Binding="{Binding donor_id}" Header="Id"/>
+                <DataGridTextColumn Binding="{Binding donor_fullname}" Header="ФИО"/>
+                <DataGridTextColumn Binding="{Binding donor_phone}" Header="Номер телефона"/>
+                <DataGridTextColumn Binding="{Binding donor_datereg}" Header="Дата регистрации"/>
+                <DataGridTextColumn Binding="{Binding donor_age}" Header="Возраст"/>
+            </DataGrid.Columns>
+        </DataGrid>
+        <Label Content="Регистрация донора" HorizontalAlignment="Center" Margin="0,27,0,0" VerticalAlignment="Top" FontSize="14" FontWeight="Bold"/>
+        <Button Content="Export" HorizontalAlignment="Left" Margin="36,369,0,0" VerticalAlignment="Top" Width="86" Click="Button_Click_export"/>
+        <Button Content="Import CSV" HorizontalAlignment="Left" VerticalAlignment="Top" Click="ImportCsvButton_Click" Margin="173,369,0,0"/>
+    </Grid>
+</Window>
+

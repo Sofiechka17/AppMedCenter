@@ -1,0 +1,12 @@
+﻿<Window x:Class="WpfApp4.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="File Creator" Height="350" Width="500">
+    <Grid Margin="10">
+        <StackPanel>
+            <TextBox x:Name="fileNameTextBox" Text="Enter File Name" Margin="5"/>
+            <TextBox x:Name="fileContentTextBox" Text="Enter File Content" Margin="5"/>
+            <Button Content="Create File" Click="CreateFileButton_Click" Margin="5"/>
+        </StackPanel>
+    </Grid>
+</Window>

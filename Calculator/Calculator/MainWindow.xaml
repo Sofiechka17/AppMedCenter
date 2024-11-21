@@ -1,0 +1,45 @@
+﻿<Window x:Class="Calculator.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Calculator"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="300">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition />
+            <RowDefinition />
+            <RowDefinition />
+            <RowDefinition />
+            <RowDefinition />
+        </Grid.RowDefinitions>
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition />
+            <ColumnDefinition />
+            <ColumnDefinition />
+            <ColumnDefinition />
+        </Grid.ColumnDefinitions>
+
+        <!-- Buttons numbers -->
+        <Button Grid.Row="1" Grid.Column="0" x:Name="btn_7" Click="btn_num_Click">7</Button>
+        <Button Grid.Row="1" Grid.Column="1" x:Name="btn_8" Click="btn_num_Click">8</Button>
+        <Button Grid.Row="1" Grid.Column="2" x:Name="btn_9" Click="btn_num_Click">9</Button>
+        <Button Grid.Row="1" Grid.Column="3" x:Name="btn_plus" Click="btn_plus_Click">+</Button>
+        <Button Grid.Row="2" Grid.Column="0" x:Name="btn_4" Click="btn_num_Click">4</Button>
+        <Button Grid.Row="2" Grid.Column="1" x:Name="btn_5" Click="btn_num_Click">5</Button>
+        <Button Grid.Row="2" Grid.Column="2" x:Name="btn_6" Click="btn_num_Click">6</Button>
+        <Button Grid.Row="2" Grid.Column="3" x:Name="btn_minus" Click="btn_op_Click">-</Button>
+        <Button Grid.Row="3" Grid.Column="0" x:Name="btn_1" Click="btn_num_Click">1</Button>
+        <Button Grid.Row="3" Grid.Column="1" x:Name="btn_2" Click="btn_num_Click">2</Button>
+        <Button Grid.Row="3" Grid.Column="2" x:Name="btn_3" Click="btn_num_Click">3</Button>
+        <Button Grid.Row="3" Grid.Column="3" x:Name="btn_mult" Click="btn_mult_Click">*</Button>
+        <Button Grid.Row="4" Grid.Column="0" x:Name="btn_0" Click="btn_num_Click">0</Button>
+        <Button Grid.Row="3" Grid.Column="1" x:Name="btn_eq" Click="btn_eq_Click" Grid.ColumnSpan="2" Margin="0,87,0,0" Grid.RowSpan="2">=</Button>
+        <Button Grid.Row="4" Grid.Column="3" x:Name="btn_div" Click="btn_div_Click">/</Button>
+
+        <!-- TextBox-->
+        <TextBox Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="4" TextAlignment="Right" VerticalAlignment="Bottom" FontSize="40" x:Name="txtValue">0</TextBox>
+    </Grid>
+</Window>

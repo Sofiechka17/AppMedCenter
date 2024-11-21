@@ -1,0 +1,81 @@
+﻿<Window x:Class="WpfAppsamost.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfAppsamost"
+        mc:Ignorable="d"
+            Title="RegTitul" Height="1332" Width="850">
+    <ScrollViewer VerticalScrollBarVisibility="Auto">
+    <Grid Height="1322" VerticalAlignment="Top">
+        <DataGrid x:Name="RegDonor" HorizontalAlignment="Left" Height="262" AutoGenerateColumns="False" Margin="36,69,0,0" VerticalAlignment="Top" Width="454" MouseLeftButtonUp="Registration_student_MouseLeftButtonUp">
+            <DataGrid.Columns>
+                <DataGridTextColumn Binding="{Binding donor_id}" Header="Id"/>
+                <DataGridTextColumn Binding="{Binding donor_fullname}" Header="ФИО"/>
+                <DataGridTextColumn Binding="{Binding donor_phone}" Header="Номер телефона"/>
+                <DataGridTextColumn Binding="{Binding donor_datereg}" Header="Дата регистрации"/>
+                <DataGridTextColumn Binding="{Binding donor_age}" Header="Возраст"/>
+            </DataGrid.Columns>
+        </DataGrid>
+        <Label Content="Регистрация донора" HorizontalAlignment="Center" Margin="0,27,0,0" VerticalAlignment="Top" FontSize="14" FontWeight="Bold"/>
+        <Label Content=" Введите ФИО" HorizontalAlignment="Left" Margin="517,72,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="fullname_input" HorizontalAlignment="Left" Height="23" Margin="526,103,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="245"/>
+        <Label Content=" Введите Номер телефона" HorizontalAlignment="Left" Margin="517,145,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="number_input" HorizontalAlignment="Left" Height="23" Margin="526,176,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="245"/>
+        <Label Content=" Введите Дату" HorizontalAlignment="Left" Margin="517,211,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="date_input" HorizontalAlignment="Left" Height="23" Margin="526,242,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="245"/>
+        <Label Content=" Введите Возраст" HorizontalAlignment="Left" Margin="526,281,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="age_input" HorizontalAlignment="Left" Height="23" Margin="526,312,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="245"/>
+        <Button Content="Add" HorizontalAlignment="Left" Margin="238,366,0,0" VerticalAlignment="Top" Width="76" Click="Button_Click_add"/>
+        <Button Content="Delete" HorizontalAlignment="Left" Margin="337,366,0,0" VerticalAlignment="Top" Width="76" Click="Button_Click_del"/>
+        <Button Content="Update" HorizontalAlignment="Left" Margin="436,366,0,0" VerticalAlignment="Top" Width="76" Click="Button_Click_up"/>
+        <Button Content="Перейти к списку проектов" HorizontalAlignment="Left" Margin="36,366,0,0" VerticalAlignment="Top" Width="173" Click="Button_Click_projectOrganization"/>
+        <DataGrid x:Name="RegProject" HorizontalAlignment="Left" Height="262" AutoGenerateColumns="False" Margin="36,463,0,0" VerticalAlignment="Top" Width="454" MouseLeftButtonUp="Registration_project_MouseLeftButtonUp">
+            <DataGrid.Columns>
+                <DataGridTextColumn Binding="{Binding project_id}" Header="Id"/>
+                <DataGridTextColumn Binding="{Binding organization_id}" Header="Организация"/>
+                <DataGridTextColumn Binding="{Binding project_name}" Header="Наименование"/>
+                <DataGridTextColumn Binding="{Binding project_description}" Header="Описание"/>
+                <DataGridTextColumn Binding="{Binding StartDate}" Header="Начало работы"/>
+                <DataGridTextColumn Binding="{Binding EndDate}" Header="Завершение"/>
+            </DataGrid.Columns>
+        </DataGrid>
+        <Label Content="Регистрация проекта" HorizontalAlignment="Center" Margin="0,421,0,0" VerticalAlignment="Top" FontSize="14" FontWeight="Bold"/>
+        <Label Content=" Выберите организацию" HorizontalAlignment="Left" Margin="517,432,0,0" VerticalAlignment="Top"/>
+        <ComboBox x:Name="organization_choise" HorizontalAlignment="Left" Margin="526,471,0,0" VerticalAlignment="Top" Width="245"/>
+        <Label Content=" Введите Наименование" HorizontalAlignment="Left" Margin="517,505,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="name_input" HorizontalAlignment="Left" Height="23" Margin="526,536,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="245"/>
+        <Label Content=" Введите Описание" HorizontalAlignment="Left" Margin="517,571,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="description_input" HorizontalAlignment="Left" Height="23" Margin="526,602,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="245"/>
+        <Label Content=" Начало работы" HorizontalAlignment="Left" Margin="526,641,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="StartDate_input" HorizontalAlignment="Left" Height="23" Margin="526,672,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="245"/>
+        <Label Content=" Завершение" HorizontalAlignment="Left" Margin="526,709,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="EndDate_input" HorizontalAlignment="Left" Height="23" Margin="526,740,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="245"/>
+        <Button Content="Add" HorizontalAlignment="Left" Margin="115,753,0,0" VerticalAlignment="Top" Width="76" Click="Button_Click_add_prjct"/>
+        <Button Content="Delete" HorizontalAlignment="Left" Margin="214,753,0,0" VerticalAlignment="Top" Width="76" Click="Button_Click_del_prjct"/>
+        <Button Content="Update" HorizontalAlignment="Left" Margin="313,753,0,0" VerticalAlignment="Top" Width="76" Click="Button_Click_up_prjct"/>
+        <DataGrid x:Name="RegDonation" HorizontalAlignment="Left" Height="262" AutoGenerateColumns="False" Margin="36,855,0,0" VerticalAlignment="Top" Width="454" MouseLeftButtonUp="Registration_donation_MouseLeftButtonUp">
+            <DataGrid.Columns>
+                <DataGridTextColumn Binding="{Binding donation_id}" Header="Id"/>
+                <DataGridTextColumn Binding="{Binding donor_id}" Header="Донор"/>
+                <DataGridTextColumn Binding="{Binding project_id}" Header="Проект"/>
+                <DataGridTextColumn Binding="{Binding Amount}" Header="Сумма"/>
+                <DataGridTextColumn Binding="{Binding DonationDate}" Header="Дата"/>
+            </DataGrid.Columns>
+        </DataGrid>
+        <Label Content="Регистрация пожертвования" HorizontalAlignment="Center" Margin="0,813,0,0" VerticalAlignment="Top" FontSize="14" FontWeight="Bold"/>
+        <Label Content=" Выберите донора" HorizontalAlignment="Left" Margin="517,858,0,0" VerticalAlignment="Top"/>
+        <ComboBox x:Name="donor_choise" HorizontalAlignment="Left" Margin="526,896,0,0" VerticalAlignment="Top" Width="245"/>
+        <Label Content=" Выберите проект" HorizontalAlignment="Left" Margin="517,931,0,0" VerticalAlignment="Top"/>
+        <ComboBox x:Name="project_choise" HorizontalAlignment="Left" Margin="526,970,0,0" VerticalAlignment="Top" Width="245"/>
+        <Label Content=" Введите сумму" HorizontalAlignment="Left" Margin="517,997,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="Amount_input" HorizontalAlignment="Left" Height="23" Margin="526,1028,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="245"/>
+        <Label Content=" Введите Дату" HorizontalAlignment="Left" Margin="526,1067,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="DonationDate_input" HorizontalAlignment="Left" Height="23" Margin="526,1098,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="245"/>
+        <Button Content="Add" HorizontalAlignment="Left" Margin="115,1147,0,0" VerticalAlignment="Top" Width="76" Click="Button_Click_add_dntn"/>
+        <Button Content="Delete" HorizontalAlignment="Left" Margin="214,1147,0,0" VerticalAlignment="Top" Width="76" Click="Button_Click_del_dntn"/>
+        <Button Content="Update" HorizontalAlignment="Left" Margin="313,1147,0,0" VerticalAlignment="Top" Width="76" Click="Button_Click_up_dntn"/>
+    </Grid>
+    </ScrollViewer>
+</Window>
+

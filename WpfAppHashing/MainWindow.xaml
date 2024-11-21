@@ -1,0 +1,26 @@
+﻿<Window x:Class="WpfAppHashing.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfAppHashing"
+        mc:Ignorable="d"
+        Title="Вход" Height="200" Width="300">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <TextBlock Text="Вход в систему" Grid.Row="0" HorizontalAlignment="Center" FontWeight="Bold"/>
+        <TextBlock Text="Ваш логин" Grid.Row="1"  HorizontalAlignment="Center"/>
+        <TextBox x:Name="LoginWW" Grid.Row="2"/>
+        <TextBlock Text="Ваш пароль" Grid.Row="3"  HorizontalAlignment="Center"/>
+        <PasswordBox Name="Password" Grid.Row="4"/>
+        <Button Content="Войти"  Grid.Row="5" Click="Button_Click"/>
+    </Grid>
+</Window>
+
